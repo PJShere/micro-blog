@@ -1,0 +1,93 @@
+2018-12-06 13:44:29,518 ERROR: Exception on /api/users/4 [PUT] [in /Users/pankajshere/Projects/microblog/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/pankajshere/Projects/microblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/pankajshere/Projects/microblog/lib/python3.6/site-packages/flask/app.py", line 1816, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/Users/pankajshere/Projects/microblog/lib/python3.6/site-packages/flask/app.py", line 1831, in finalize_request
+    response = self.make_response(rv)
+  File "/Users/pankajshere/Projects/microblog/lib/python3.6/site-packages/flask/app.py", line 1957, in make_response
+    'The view function did not return a valid response. The'
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2018-12-06 13:47:20,150 INFO: Microblog startup [in /Users/pankajshere/Projects/microblog/app/__init__.py:89]
+2018-12-06 15:36:50,707 ERROR: Exception on /index [POST] [in /Users/pankajshere/Projects/microblog/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/pankajshere/Projects/microblog/lib/python3.6/site-packages/urllib3/connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "/Users/pankajshere/Projects/microblog/lib/python3.6/site-packages/urllib3/util/connection.py", line 80, in create_connection
+    raise err
+  File "/Users/pankajshere/Projects/microblog/lib/python3.6/site-packages/urllib3/util/connection.py", line 70, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/pankajshere/Projects/microblog/lib/python3.6/site-packages/elasticsearch/connection/http_urllib3.py", line 172, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=Retry(False), headers=request_headers, **kw)
+  File "/Users/pankajshere/Projects/microblog/lib/python3.6/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/Users/pankajshere/Projects/microblog/lib/python3.6/site-packages/urllib3/util/retry.py", line 343, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/Users/pankajshere/Projects/microblog/lib/python3.6/site-packages/urllib3/packages/six.py", line 686, in reraise
+    raise value
+  File "/Users/pankajshere/Projects/microblog/lib/python3.6/site-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/Users/pankajshere/Projects/microblog/lib/python3.6/site-packages/urllib3/connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/local/Cellar/python/3.6.4_4/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/Cellar/python/3.6.4_4/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/Cellar/python/3.6.4_4/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/Cellar/python/3.6.4_4/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/usr/local/Cellar/python/3.6.4_4/Frameworks/Python.framework/Versions/3.6/lib/python3.6/http/client.py", line 964, in send
+    self.connect()
+  File "/Users/pankajshere/Projects/microblog/lib/python3.6/site-packages/urllib3/connection.py", line 181, in connect
+    conn = self._new_conn()
+  File "/Users/pankajshere/Projects/microblog/lib/python3.6/site-packages/urllib3/connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x10b727cc0>: Failed to establish a new connection: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/pankajshere/Projects/microblog/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/pankajshere/Projects/microblog/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/pankajshere/Projects/microblog/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/pankajshere/Projects/microblog/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/pankajshere/Projects/microblog/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/pankajshere/Projects/microblog/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/pankajshere/Projects/microblog/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/pankajshere/Projects/microblog/app/main/routes.py", line 26, in index
+    db.session.commit()
+  File "/Users/pankajshere/Projects/microblog/lib/python3.6/site-packages/sqlalchemy/orm/scoping.py", line 153, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/Users/pankajshere/Projects/microblog/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 954, in commit
+    self.transaction.commit()
+  File "/Users/pankajshere/Projects/microblog/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 474, in commit
+    self.session.dispatch.after_commit(self.session)
+  File "/Users/pankajshere/Projects/microblog/lib/python3.6/site-packages/sqlalchemy/event/attr.py", line 246, in __call__
+    fn(*args, **kw)
+  File "/Users/pankajshere/Projects/microblog/app/models.py", line 39, in after_commit
+    add_to_index(obj.__tablename__, obj)
+  File "/Users/pankajshere/Projects/microblog/app/search.py", line 11, in add_to_index
+    body=payload)
+  File "/Users/pankajshere/Projects/microblog/lib/python3.6/site-packages/elasticsearch/client/utils.py", line 76, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/Users/pankajshere/Projects/microblog/lib/python3.6/site-packages/elasticsearch/client/__init__.py", line 319, in index
+    _make_path(index, doc_type, id), params=params, body=body)
+  File "/Users/pankajshere/Projects/microblog/lib/python3.6/site-packages/elasticsearch/transport.py", line 318, in perform_request
+    status, headers_response, data = connection.perform_request(method, url, params, body, headers=headers, ignore=ignore, timeout=timeout)
+  File "/Users/pankajshere/Projects/microblog/lib/python3.6/site-packages/elasticsearch/connection/http_urllib3.py", line 181, in perform_request
+    raise ConnectionError('N/A', str(e), e)
+elasticsearch.exceptions.ConnectionError: ConnectionError(<urllib3.connection.HTTPConnection object at 0x10b727cc0>: Failed to establish a new connection: [Errno 61] Connection refused) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x10b727cc0>: Failed to establish a new connection: [Errno 61] Connection refused)

@@ -1,0 +1,15 @@
+migrations/
+include/
+bin/
+lib/
+app/translations/es/LC_MESSAGES/messages.mo
+app/translations/es/LC_MESSAGES/messages.po
+__pycache__/
+*.db
+dump.rdb
+pip-selfcheck.json
+.env
+.ycm_extra_conf.py
+.DS_Store
+.Python
+logs/*.log
