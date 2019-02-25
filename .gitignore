@@ -12,4 +12,4 @@ pip-selfcheck.json
 .ycm_extra_conf.py
 .DS_Store
 .Python
-logs/*.log
+logs/*.*
